@@ -24,11 +24,10 @@ import java.util.concurrent.TimeUnit;
 public class Login_TC1 extends BaseTest{
 @BeforeTest
 public void setup(){
-//    BaseTest baseTest=new BaseTest();
-//    baseTest.initialize();
-    System.setProperty("webdriver.chrome.driver", "chromedriver96");
-    WebDriver driver = new ChromeDriver();
-    driver.get("https://demoqa.com/books");
+    BaseTest baseTest=new BaseTest();
+    baseTest.initialize();
+//    System.setProperty("webdriver.chrome.driver", "chromedriver96");
+//    WebDriver driver = new ChromeDriver();
 
 }
 
@@ -36,7 +35,14 @@ public void setup(){
     @Test(description = "Login and Logout Scenario")
     @Description("Success login and logout scenario")
     @Story("Valid username and password login test")
-    public void login(){
+    public void openForms(){
+
+//        WebElement element= driver.findElement(By.className("card-body")));
+//        WebElement element = driver.findElement(By.className("card-body"));
+//        WebElement elementementForm= driver.findElement(By.cssSelector("[class^=category-cards]:nth-child(2)"));
+
+//        elementForm.click();
+
 
         HomePage home = new HomePage();
         LoginPage login = new LoginPage();
