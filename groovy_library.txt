@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/35331821/creating-script-library-in-soapui-free-version
+
+handy.export.jar

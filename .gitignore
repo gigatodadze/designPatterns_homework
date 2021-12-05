@@ -1,0 +1,6 @@
+.idea
+*.log
+*.mdmp
+target/
+build/
+*.iml

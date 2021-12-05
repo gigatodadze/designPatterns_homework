@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" >
+
+    <test name="First DP Run">
+        <groups>
+            <run>
+                <include name = "One" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.Parametrization.ITestContext_DataProvider"/>
+        </classes>
+
+    </test>
+    <test name="Second DP Run">
+        <groups>
+            <run>
+                <include name = "Two" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.Parametrization.ITestContext_DataProvider"/>
+        </classes>
+    </test>
+</suite>
