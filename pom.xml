@@ -66,11 +66,11 @@
         </dependency>
 
 
-        <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>4.2.1</version>
-    </dependency>
+<!--        <dependency>-->
+<!--        <groupId>io.github.bonigarcia</groupId>-->
+<!--        <artifactId>webdrivermanager</artifactId>-->
+<!--        <version>4.2.1</version>-->
+<!--    </dependency>-->
         <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
         <dependency>
             <groupId>com.codeborne</groupId>
