@@ -2,6 +2,8 @@ package POM_Allure;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -14,6 +16,8 @@ public class Dashboard extends BaseTest {
 
     @Step
     public String getHeading() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver96");
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         String head = driver.findElement(heading).getText();
         return head;
@@ -26,6 +30,9 @@ public class Dashboard extends BaseTest {
 
     @Step
     public void clickLogout() {
+
+        System.setProperty("webdriver.chrome.driver", "chromedriver96");
+        WebDriver driver = new ChromeDriver();
         driver.findElement(logoutBtn).click();
     }
 }

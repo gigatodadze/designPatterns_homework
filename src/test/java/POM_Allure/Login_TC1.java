@@ -61,15 +61,15 @@ public void setup(){
   //  @Story("InvaliValid username and password login test")
     public void invalidLogin(){
 
-        HomePage home = new HomePage();
-        LoginPage login = new LoginPage();
-        Dashboard dashboard = new Dashboard();
-        home.clickLogin();
-        login.enterUsername("alina23");
-        login.enterPassword("Automation");
-        login.clickLogin();
-        dashboard.checkText();
-        dashboard.clickLogout();
+//        HomePage home = new HomePage();
+//        LoginPage login = new LoginPage();
+//        Dashboard dashboard = new Dashboard();
+//        home.clickLogin();
+//        login.enterUsername("alina23");
+//        login.enterPassword("Automation");
+//        login.clickLogin();
+//        dashboard.checkText();
+//        dashboard.clickLogout();
 
     }
 
