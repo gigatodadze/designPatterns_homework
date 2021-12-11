@@ -1,0 +1,1 @@
+{"uuid":"671ee67e-72d0-43a5-8d91-fbd26c9aa843","name":"TestAutomationProject-dev","children":["4ae712a3-5167-4383-ac13-16bf32ef17aa"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1639245089301,"stop":1639245091608}],"afters":[],"links":[],"start":1639245089268,"stop":1639245102742}

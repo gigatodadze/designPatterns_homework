@@ -12,10 +12,11 @@ import org.testng.annotations.Test;
 public class UserRegister {
     @DataProvider
     public static Object[][] userData() {
-        return new Object[][] {{"Giga","Todadze","Male","0558313933"},{"Mariam","Todadze","Female","0555199393"} };
+        return new Object[][]{{"Giga", "Todadze", "Male", "0558313933"}, {"Mariam", "Todadze", "Female", "0555199393"}};
     }
-    @Test(dataProvider = "userData",description = "Register New Student Scenario")
-    public void fillForms(String firstName,String lastName,String gender,String userNumber) {
+
+    @Test(dataProvider = "userData", description = "Register New Student Scenario")
+    public void fillForms(String firstName, String lastName, String gender, String userNumber) {
         System.setProperty("webdriver.chrome.driver", "chromedriver96");
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/");
@@ -23,7 +24,7 @@ public class UserRegister {
         driver.manage().window().maximize();
 
         WebElement elementForm = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[2]/div/div[2]"));
-        if(elementForm.getText().equals("Forms")){
+        if (elementForm.getText().equals("Forms")) {
             elementForm.click();
         }
 
@@ -39,12 +40,10 @@ public class UserRegister {
         if (gender.equals("Male")) {
             WebElement genderField = driver.findElement(By.xpath("//*[@id=\"genterWrapper\"]/div[2]/div[1]"));
             genderField.click();
-        }
-        else if(gender.equals("Female")){
+        } else if (gender.equals("Female")) {
             WebElement genderField = driver.findElement(By.xpath("//*[@id=\"genterWrapper\"]/div[2]/div[2]"));
             genderField.click();
-        }
-        else {
+        } else {
             WebElement genderField = driver.findElement(By.xpath("//*[@id=\"genterWrapper\"]/div[2]/div[3]"));
             genderField.click();
         }
@@ -61,22 +60,48 @@ public class UserRegister {
 
         WebElement ThankYouText = driver.findElement(By.id("example-modal-sizes-title-lg"));
 
-        if (ThankYouText.getText().equals("Thanks for submitting the form")){
+        if (ThankYouText.getText().equals("Thanks for submitting the form")) {
             System.out.println("Thank you message is visible");
         }
 
         WebElement tablenameSurname = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[1]/td[2]"));
-        if(tablenameSurname.getText().equals(firstName+" "+lastName)){
+        if (tablenameSurname.getText().equals(firstName + " " + lastName)) {
             System.out.println("Name and Surname is correct");
         }
 
         WebElement tableGender = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[3]/td[2]"));
-        if(tableGender.getText().equals(gender)){
+        if (tableGender.getText().equals(gender)) {
             System.out.println("Gender is correct");
         }
         WebElement tableNumber = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[4]/td[2]"));
-        if(tableNumber.getText().equals(userNumber)){
+        if (tableNumber.getText().equals(userNumber)) {
             System.out.println("Number is correct");
         }
     }
+
+//    @Test(dataProvider = "userData", description = "Check New Student Scenario")
+//    public void CheckForms(String firstName, String lastName, String gender, String userNumber) {
+//
+//        System.setProperty("webdriver.chrome.driver", "chromedriver96");
+//        WebDriver driver = new ChromeDriver();
+//        WebElement ThankYouText = driver.findElement(By.id("example-modal-sizes-title-lg"));
+//
+//        if (ThankYouText.getText().equals("Thanks for submitting the form")) {
+//            System.out.println("Thank you message is visible");
+//        }
+//
+//        WebElement tablenameSurname = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[1]/td[2]"));
+//        if (tablenameSurname.getText().equals(firstName + " " + lastName)) {
+//            System.out.println("Name and Surname is correct");
+//        }
+//
+//        WebElement tableGender = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[3]/td[2]"));
+//        if (tableGender.getText().equals(gender)) {
+//            System.out.println("Gender is correct");
+//        }
+//        WebElement tableNumber = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[4]/td[2]"));
+//        if (tableNumber.getText().equals(userNumber)) {
+//            System.out.println("Number is correct");
+//        }
+//    }
 }

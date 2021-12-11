@@ -18,11 +18,10 @@ import org.testng.annotations.Test;
 @Feature("FillForm Tests")
 public class Login_TC1 extends BaseTest {
 
-//    @BeforeTest
-//    public void setup() {
-//        initialize();
-//        this.driver.get("https://demoqa.com/");
-//    }
+    @BeforeTest
+    public void setup() {
+        initialize();
+    }
 
 //    public Login_TC1(WebDriver driver) {
 //        this.driver = driver;
@@ -33,7 +32,7 @@ public class Login_TC1 extends BaseTest {
         return new Object[][] {{"Giga","Todadze","Male","0558313933"},{"Mariam","Todadze","Female","0555199393"} };
     }
 
-    @Test(dataProvider = "userData",description = "Register New Student Scenario")
+    @Test(description = "Register New Student Scenario")
     public void login(){
         UserRegister userRegister = new UserRegister();
         Object[][] myData = userData();
@@ -41,6 +40,15 @@ public class Login_TC1 extends BaseTest {
         userRegister.fillForms(myData[i][0].toString(),myData[i][1].toString(),myData[i][2].toString(),myData[i][3].toString());
      }
     }
+
+//    @Test(description = "Check New Student Scenario")
+//    public void check(){
+//        UserRegister userRegister = new UserRegister();
+//        Object[][] myData = userData();
+//        for (int i = 0; i <= myData.length; i++) {
+//            userRegister.CheckForms(myData[i][0].toString(),myData[i][1].toString(),myData[i][2].toString(),myData[i][3].toString());
+//        }
+//    }
 
 
 }
